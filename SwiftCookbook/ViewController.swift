@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+        blurView.frame.size = CGSize(width: 300, height: 300)
+        blurView.center = view.center
+        view.addSubview(blurView)
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,7 @@
 		34F7011C1AD3F7E2003443B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F7011B1AD3F7E2003443B3 /* Images.xcassets */; };
 		34F7011F1AD3F7E2003443B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7011D1AD3F7E2003443B3 /* LaunchScreen.xib */; };
 		34F7012B1AD3F7E2003443B3 /* SwiftCookbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F7012A1AD3F7E2003443B3 /* SwiftCookbookTests.swift */; };
+		34F701351AD3FAC0003443B3 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34F701341AD3FAC0003443B3 /* image1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		34F701241AD3F7E2003443B3 /* SwiftCookbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCookbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F701291AD3F7E2003443B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F7012A1AD3F7E2003443B3 /* SwiftCookbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCookbookTests.swift; sourceTree = "<group>"; };
+		34F701341AD3FAC0003443B3 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpg; path = "../../../work/others/support/sample/src/main/res/drawable-xhdpi/image1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		34F7010E1AD3F7E1003443B3 /* SwiftCookbook */ = {
 			isa = PBXGroup;
 			children = (
+				34F701341AD3FAC0003443B3 /* image1.jpg */,
 				34F701111AD3F7E1003443B3 /* AppDelegate.swift */,
 				34F701161AD3F7E1003443B3 /* ViewController.swift */,
 				34F701181AD3F7E1003443B3 /* Main.storyboard */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F7011A1AD3F7E2003443B3 /* Main.storyboard in Resources */,
+				34F701351AD3FAC0003443B3 /* image1.jpg in Resources */,
 				34F7011F1AD3F7E2003443B3 /* LaunchScreen.xib in Resources */,
 				34F7011C1AD3F7E2003443B3 /* Images.xcassets in Resources */,
 			);
