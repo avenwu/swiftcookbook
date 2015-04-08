@@ -24,13 +24,20 @@ class ViewController: UIViewController {
     func selectionHandler(selectedItem: String) {
         self.selectedItem = selectedItem
     }
+    var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+        // add blur effect to imageview
+        /*let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
 
         blurView.frame.size = CGSize(width: 300, height: 300)
         blurView.center = view.center
-        view.addSubview(blurView)
+        view.addSubview(blurView)*/
+        label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 23))
+        label.text = "iOS Programming Cookbook"
+        label.font = UIFont.boldSystemFontOfSize(14)
+        view.addSubview(label)
+        
     }
 
     override func didReceiveMemoryWarning() {
