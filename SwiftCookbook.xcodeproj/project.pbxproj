@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34EAB00B1AD42E170078BDE5 /* PopoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EAB00A1AD42E170078BDE5 /* PopoverTableViewController.swift */; };
 		34F701121AD3F7E1003443B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F701111AD3F7E1003443B3 /* AppDelegate.swift */; };
 		34F701151AD3F7E1003443B3 /* SwiftCookbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F701131AD3F7E1003443B3 /* SwiftCookbook.xcdatamodeld */; };
 		34F701171AD3F7E1003443B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F701161AD3F7E1003443B3 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34EAB00A1AD42E170078BDE5 /* PopoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverTableViewController.swift; sourceTree = "<group>"; };
 		34F7010C1AD3F7E1003443B3 /* SwiftCookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCookbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F701101AD3F7E1003443B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F701111AD3F7E1003443B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				34F7011D1AD3F7E2003443B3 /* LaunchScreen.xib */,
 				34F701131AD3F7E1003443B3 /* SwiftCookbook.xcdatamodeld */,
 				34F7010F1AD3F7E1003443B3 /* Supporting Files */,
+				34EAB00A1AD42E170078BDE5 /* PopoverTableViewController.swift */,
 			);
 			path = SwiftCookbook;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F701171AD3F7E1003443B3 /* ViewController.swift in Sources */,
+				34EAB00B1AD42E170078BDE5 /* PopoverTableViewController.swift in Sources */,
 				34F701151AD3F7E1003443B3 /* SwiftCookbook.xcdatamodeld in Sources */,
 				34F701121AD3F7E1003443B3 /* AppDelegate.swift in Sources */,
 			);
@@ -413,6 +417,7 @@
 				34F701301AD3F7E2003443B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34F701311AD3F7E2003443B3 /* Build configuration list for PBXNativeTarget "SwiftCookbookTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				34F701331AD3F7E2003443B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
