@@ -24,30 +24,88 @@ class ViewController: UIViewController {
     func selectionHandler(selectedItem: String) {
         self.selectedItem = selectedItem
     }
+    
     var label: UILabel!
+    var button: UIButton!
+    var controller: UIAlertController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // add blur effect to imageview
-        /*let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
-
+        addButton()
+    }
+    
+    func addAlert() {
+        controller = UIAlertController(title: "Title Fuck", message: "Bitch", preferredStyle: .ActionSheet)
+        let action = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: {(paramAction:UIAlertAction!) in print("Finished!")
+        })
+//        controller!.addAction(action);
+        let actionEmail = UIAlertAction(title: "Via email", style: UIAlertActionStyle.Default,
+            handler: {(paramAction:UIAlertAction!) in
+            /* Send the photo via email */
+            })
+        let actionImessage = UIAlertAction(title: "Via iMessage", style: UIAlertActionStyle.Default,
+            handler: {(paramAction:UIAlertAction!) in
+            /* Send the photo via iMessage */
+            })
+        let actionDelete = UIAlertAction(title: "Delete photo", style: UIAlertActionStyle.Destructive,
+            handler: {(paramAction:UIAlertAction!) in
+            /* Delete the photo here */
+            })
+        controller!.addAction(actionEmail)
+        controller!.addAction(actionImessage)
+        controller!.addAction(actionDelete)
+        self.presentViewController(controller!, animated: true, completion: nil)
+    }
+    
+    func addButton(){
+        button = UIButton.buttonWithType(.System) as? UIButton
+        button.frame = CGRect(x: 110, y: 70, width: 100, height: 44)
+        button.setTitle("Press Me", forState: .Normal)
+        button.setTitle("I'm Pressed", forState: .Highlighted)
+        button.setTitleColor(UIColor.redColor(), forState: .Highlighted)
+        button.addTarget(self, action: "buttonIsPressed:", forControlEvents: .TouchDown)
+        button.addTarget(self, action: "buttonIsPressed:", forControlEvents: .TouchUpInside)
+        view.addSubview(button)
+    }
+    func buttonIsPressed(sender: UIButton) {
+        print("Click button")
+        addAlert()
+    }
+    
+    /**
+    * add blur effect to imageview
+    */
+    func addBlurEffect() {
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
         blurView.frame.size = CGSize(width: 300, height: 300)
         blurView.center = view.center
-        view.addSubview(blurView)*/
-
-        // label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 70))
+        view.addSubview(blurView)
+    }
+    
+    /**
+    * add simple UILabel with multiline text
+    */
+    func addNormalLabel() {
+        label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 70))
+        label.text = "iOS Programming Cookbook"
+        label.font = UIFont.boldSystemFontOfSize(14)
+        //set 0 means multilines
+        label.numberOfLines = 0
+        // auto resize the text
+        label.adjustsFontSizeToFitWidth = true
+    }
+    
+    /**
+    * add UILabel with two different attributes of string
+    */
+    func addLabelWithAttribute() {
         label = UILabel()
         label.attributedText = attributedText()
         label.center = CGPoint(x: 80, y: 400)
         label.sizeToFit()
-//        label.text = "iOS Programming Cookbook"
-//        label.font = UIFont.boldSystemFontOfSize(14)
-        //set 0 means multilines
-//        label.numberOfLines = 0
-        // auto resize the text
-//        label.adjustsFontSizeToFitWidth = true
         view.addSubview(label)
-        
     }
+    
     func attributedText() -> NSAttributedString {
         let attributedString = "Hello Swift" as NSString
         let result = NSMutableAttributedString(string: attributedString)
@@ -70,6 +128,7 @@ class ViewController: UIViewController {
         result.setAttributes(attributes4SecondWord, range: attributedString.rangeOfString("Swift"))
         return  NSAttributedString(attributedString: result)
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
