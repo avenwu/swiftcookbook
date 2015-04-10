@@ -34,23 +34,38 @@ class ViewController: UIViewController {
         addButton()
     }
     
+    override func viewDidAppear(animated: Bool) {
+//        addActionSheet()
+    }
     func addAlert() {
-        controller = UIAlertController(title: "Title Fuck", message: "Bitch", preferredStyle: .ActionSheet)
+        controller = UIAlertController(title: "Title Fuck", message: "Bitch", preferredStyle: .Alert)
         let action = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: {(paramAction:UIAlertAction!) in print("Finished!")
         })
-//        controller!.addAction(action);
+        controller!.addAction(action);
+        self.presentViewController(controller!, animated: true, completion: nil)
+    }
+    
+    func addActionSheet() {
+        controller = UIAlertController(title: "Title Fuck", message: "Bitch", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        // necessary for regular
+        controller!.popoverPresentationController?.sourceView = view
+        controller!.popoverPresentationController?.sourceRect = button.frame
+        //        controller!.presentationController?.containerView = view
+        let action = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: {(paramAction:UIAlertAction!) in print("Finished!")
+        })
+
         let actionEmail = UIAlertAction(title: "Via email", style: UIAlertActionStyle.Default,
             handler: {(paramAction:UIAlertAction!) in
-            /* Send the photo via email */
-            })
+                /* Send the photo via email */
+        })
         let actionImessage = UIAlertAction(title: "Via iMessage", style: UIAlertActionStyle.Default,
             handler: {(paramAction:UIAlertAction!) in
-            /* Send the photo via iMessage */
-            })
+                /* Send the photo via iMessage */
+        })
         let actionDelete = UIAlertAction(title: "Delete photo", style: UIAlertActionStyle.Destructive,
             handler: {(paramAction:UIAlertAction!) in
-            /* Delete the photo here */
-            })
+                /* Delete the photo here */
+        })
         controller!.addAction(actionEmail)
         controller!.addAction(actionImessage)
         controller!.addAction(actionDelete)
@@ -69,7 +84,8 @@ class ViewController: UIViewController {
     }
     func buttonIsPressed(sender: UIButton) {
         print("Click button")
-        addAlert()
+//        addAlert()
+        addActionSheet()
     }
     
     /**
