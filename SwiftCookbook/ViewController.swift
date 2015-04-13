@@ -124,7 +124,7 @@ class ViewController: UIViewController {
     
     func attributedText() -> NSAttributedString {
         let attributedString = "Hello Swift" as NSString
-        let result = NSMutableAttributedString(string: attributedString)
+        let result = NSMutableAttributedString(string: attributedString as String)
         let attributes4FirstWord = [
             NSFontAttributeName : UIFont.boldSystemFontOfSize(60),
             NSForegroundColorAttributeName : UIColor.redColor(),

@@ -29,7 +29,7 @@ class PopoverTableViewController: UITableViewController {
         }()
     
     var cancelBarButtonItem: UIBarButtonItem!
-    var selectionHandler: ((selectedItem: String) -> Void!)?
+    var selectionHandler: (String -> Void)?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,7 +56,7 @@ class PopoverTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedItem = items[indexPath]
-        selectionHandler?(selectedItem: selectedItem)
+        selectionHandler?(selectedItem)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -70,7 +70,7 @@ class PopoverTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewValues.identifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewValues.identifier, forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel?.text = items[indexPath]
         return cell
     }
