@@ -28,14 +28,31 @@ class ViewController: UIViewController {
     var label: UILabel!
     var button: UIButton!
     var controller: UIAlertController?
-    
+    var switcher: UISwitch?
     override func viewDidLoad() {
         super.viewDidLoad()
         addButton()
+        addUISwitch()
     }
     
     override func viewDidAppear(animated: Bool) {
 //        addActionSheet()
+    }
+
+    func addUISwitch() {
+        switcher = UISwitch(frame: CGRect(x: 100, y: 100, width: 0, height: 0))
+        view.addSubview(switcher!)
+        switcher?.addTarget(self, action: "onSwitchChanged:", forControlEvents: .ValueChanged)
+        switcher?.onTintColor = UIColor.redColor()
+        switcher?.tintColor = UIColor.brownColor()
+        switcher?.thumbTintColor = UIColor.grayColor()
+    }
+    func onSwitchChanged(sender : UISwitch){
+        if sender.on {
+            println("Swich is on")
+        } else {
+            println("Switch is on")
+        }
     }
     func addAlert() {
         controller = UIAlertController(title: "Title Fuck", message: "Bitch", preferredStyle: .Alert)

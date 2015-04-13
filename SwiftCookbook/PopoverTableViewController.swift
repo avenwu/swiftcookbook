@@ -49,7 +49,7 @@ class PopoverTableViewController: UITableViewController {
         cancelBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "performCancel")
         navigationItem.leftBarButtonItem = cancelBarButtonItem
     }
-    
+
     func performCancel() {
         dismissViewControllerAnimated(true, completion: nil)
     }
