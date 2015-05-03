@@ -35,6 +35,17 @@ class ViewController: UIViewController {
         addUISwitch()
     }
     
+    @IBAction func onManualSegueTouchDown(sender: AnyObject) {
+            self.performSegueWithIdentifier("manualSegue", sender: sender)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var identifier = segue.identifier
+        if identifier == "manualSegue" {
+            var destVc = (segue.destinationViewController as! PresentedViewController)
+            destVc.data = "some value from presenting vc \(identifier)"
+        }
+    }
     override func viewDidAppear(animated: Bool) {
 //        addActionSheet()
     }
